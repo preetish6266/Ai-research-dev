@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300f2fe' stroke-width='2'%3E%3Cpath d='M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z'/%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResearchPilot AI - Next-Gen Academic Research Assistant</title>
+    <meta name="description" content="AI Research Assistant: find gaps, generate novel ideas, review literature, and structure academic project timelines." />
+  </head>
+  <body>
+    <!-- Background Gradient Glows -->
+    <div class="glow-backdrop dark-mode-glow-1"></div>
+    <div class="glow-backdrop dark-mode-glow-2"></div>
+
+    <div id="app">
+      <!-- Routing Switchboxes -->
+      
+      <!-- 1. LANDING PAGE SHELL -->
+      <div id="landing-view" style="width: 100%; display: none;"></div>
+
+      <!-- 2. APPLICATION DASHBOARD SHELL -->
+      <div id="app-view" style="width: 100%; display: none; min-height: 100vh;">
+        <!-- Glassmorphism Sidebar -->
+        <aside class="app-sidebar glass-panel" id="sidebar-drawer">
+          <div class="sidebar-header">
+            <div class="brand">
+              <div class="brand-icon" id="sidebar-logo-icon"></div>
+              <span>ResearchPilot AI</span>
+            </div>
+            <button class="menu-toggle" id="sidebar-close-btn"></button>
+          </div>
+
+          <div class="sidebar-menu" id="sidebar-menu-list">
+            <!-- Dynamically populated in main.js -->
+          </div>
+
+          <div class="sidebar-footer">
+            <div class="user-profile-widget" id="sidebar-profile-widget">
+              <div class="user-avatar" id="sidebar-avatar-box">U</div>
+              <div class="user-info">
+                <span class="user-name" id="sidebar-user-name">User Name</span>
+                <span class="user-role" id="sidebar-user-role">Role</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="app-content">
+          <!-- Top Sticky Nav -->
+          <nav class="top-nav">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <button class="menu-toggle" id="mobile-menu-btn" style="padding: 0.5rem; display: none;">
+                <!-- Menu Icon -->
+              </button>
+              <h2 class="page-title" id="current-page-title">Dashboard</h2>
+            </div>
+            
+            <div class="top-actions">
+              <button class="glass-btn" id="theme-toggle-btn" style="padding: 0.5rem;" title="Toggle Theme">
+                <!-- Theme Icon -->
+              </button>
+              <button class="glass-btn" id="logout-btn" style="padding: 0.5rem 0.75rem; font-size: 0.85rem; font-weight: 500;">
+                Sign Out
+              </button>
+            </div>
+          </nav>
+
+          <!-- Dynamic Component Viewport -->
+          <div class="main-view-container" id="main-route-container"></div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
